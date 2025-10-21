@@ -5,11 +5,10 @@
 }
 
 :root {
-  --bg: #f5ebd7;
-  --color: #3c3c38;
+  --bg: #5f9ea0;
+  --color: #2e2e2b;
   --white: #fdfdfd;
   --overlay: rgba(0, 0, 0, 0.5);
-  --footer-bg: #2e2e2e;
 }
 
 
@@ -22,18 +21,7 @@ body {
 }
 
 header {
-  background-color: var(--white);
   padding: 2rem;
-  position: relative; /* ハンバーガーアイコンのために相対位置を設定 */
+  position: relative; /* for hamburger icon */
 }
 
-footer {
-  color: var(--white);
-  text-align: center;
-  padding: 1rem;
-  background: var(--footer-bg);
-  font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}

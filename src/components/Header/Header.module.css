@@ -34,7 +34,10 @@
   top: 32px;
 }
 
-/* メニューオープン時 */
+/* ------------------------ */
+/* menu open */
+/* ------------------------ */
+
 .hamburger.active .bar:nth-of-type(1) {
   transform: translateY(9px) rotate(-45deg);
 }
@@ -67,7 +70,9 @@
   list-style: none;
 }
 
-/* --- ナビボタン --- */
+/* ------------------------ */
+/* nav button style */
+/* ------------------------ */
 .nav_list li button {
   background: none;
   margin: 0 0 0 3rem;
@@ -80,7 +85,10 @@
   text-align: left;
 }
 
-/* --- PCサイズ以上での表示（600px〜） --- */
+/* ------------------------ */
+/* media query */
+/* ------------------------ */
+
 @media (min-width: 600px) {
   .hamburger {
     display: none;
