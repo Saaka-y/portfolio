@@ -1,0 +1,184 @@
+
+/* --- ハンバーガー--- */
+.hamburger {
+  position: fixed;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  left: 11px;
+  width: 26px;
+  height: 2px;
+  background-color: #333;
+  transition: all .4s;
+}
+
+.bar:nth-of-type(1) {
+  top: 14px;
+}
+.bar:nth-of-type(2) {
+  top: 23px;
+}
+.bar:nth-of-type(3) {
+  top: 32px;
+}
+
+/* メニューオープン時 */
+.hamburger.active .bar:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+.hamburger.active .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--overlay);
+  box-shadow: 2px 0 4px rgba(0,0,0,.1);
+  transform: translateX(-100%);
+  transition: transform .4s;
+  z-index: 90;
+}
+
+.nav.active {
+  transform: translateX(0);
+}
+
+.nav_list { 
+  padding: 100px 0 0;
+  list-style: none;
+}
+
+/* --- ナビボタン --- */
+.nav_list li button {
+  background: none;
+  margin: 0 0 0 3rem;
+  padding: 1rem;
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* --- PCサイズ以上での表示（600px〜） --- */
+@media (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav_list {
+    display: flex;
+    padding: 0;
+  }
+
+  .nav_list li button {
+    color: var(--color);
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+/* モーダル背景 */
+.modal_overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay);
+  z-index: 10;
+}
+
+/* モーダル本体 */
+.modal_section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  z-index: 20;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.close_btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1.2rem;
+  color: var(--color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.skills_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill_item {
+  text-align: center;
+}
+
+.skill_item img {
+  width: 60px;
+  height: 60px;
+}
+
+.work_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.work_card {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+
+

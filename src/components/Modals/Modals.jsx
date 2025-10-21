@@ -1,0 +1,26 @@
+import React from "react";
+import { Overlay } from "@/components/Modals/Overlay";
+import { HomeModal } from "@/components/Modals/Home";
+import { AboutModal } from "@/components/Modals/About";
+import { WorksModal } from "@/components/Modals/Works";
+import SkillsModal from "@/components/Modals/Skills";
+import ContactModal from "@/components/Modals/Contact";
+
+
+export function Modals({ modalVisible, onClose }) {
+  // どれかモーダルが開いていればオーバーレイ表示
+  const isAnyModalVisible = Object.values(modalVisible).some(Boolean);
+
+  return (
+    <>
+      <Overlay isVisible={isAnyModalVisible} onClick={onClose} />
+      <div id="modal-container">
+        <HomeModal isVisible={modalVisible.home} />
+        <AboutModal isVisible={modalVisible.about} />
+        <WorksModal isVisible={modalVisible.works} />
+        <SkillsModal isVisible={modalVisible.skills} />
+        <ContactModal isVisible={modalVisible.contact} />
+      </div>
+    </>
+  );
+}
