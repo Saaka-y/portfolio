@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Modals } from "@/components/Modals/Modals";
 
 
@@ -39,7 +38,6 @@ export default function Home() {
 
       <Header />
       <Modals modalVisible={modalVisible} onClose={closeAllModals} />
-      <Footer />
     </>
   );
 }
