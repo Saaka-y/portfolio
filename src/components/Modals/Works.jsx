@@ -1,7 +1,7 @@
 import styles from "@/components/Modals/Modals.module.css";
 
 
-export function WorksModal({ isVisible }) {
+export function WorksModal({ isVisible, onClose }) {
   return (
         <section 
         id="works" 
@@ -12,7 +12,7 @@ export function WorksModal({ isVisible }) {
             <div className={styles.work_card}>Project 2</div>
             <div className={styles.work_card}>Project 3</div>
           </div>
-          <button className={styles.close_btn}>閉じる</button>
+          <button className={styles.close_btn} onClick={onClose}>閉じる</button>
         </section>
   );
 }

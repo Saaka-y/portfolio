@@ -1,6 +1,6 @@
 import styles from "@/components/Modals/Modals.module.css";
 
-export default function SkillsModal({ isVisible }) {
+export function SkillsModal({ isVisible, onClose }) {
   return (
     <section
       id="skills"
@@ -21,7 +21,7 @@ export default function SkillsModal({ isVisible }) {
           <p>React</p>
         </div>
       </div>
-      <button className={styles.close_btn}>閉じる</button>
+      <button className={styles.close_btn} onClick={onClose}>閉じる</button>
     </section>
   );
 }

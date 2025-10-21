@@ -1,6 +1,6 @@
 import styles from "@/components/Modals/Modals.module.css";
 
-export default function ContactModal({ isVisible }) {
+export function ContactModal({ isVisible, onClose }) {
   return (
     <section
       id="contact"
@@ -9,7 +9,7 @@ export default function ContactModal({ isVisible }) {
       <h2>Contact</h2>
       <p>メール: your@email.com</p>
       <p>X (旧Twitter): @yourhandle</p>
-      <button className={styles.close_btn}>閉じる</button>
+      <button className={styles.close_btn} onClick={onClose}>閉じる</button>
     </section>
   );
 }

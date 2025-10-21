@@ -5,6 +5,6 @@ export function Overlay({ isVisible }) {
     <div
       id="modal-overlay"
       className={`${styles.modal_overlay} ${!isVisible ? styles.hidden : ""}`}
-      ></div>
+    ></div>
   );
 }

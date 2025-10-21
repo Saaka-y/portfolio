@@ -3,8 +3,8 @@ import { Overlay } from "@/components/Modals/Overlay";
 import { HomeModal } from "@/components/Modals/Home";
 import { AboutModal } from "@/components/Modals/About";
 import { WorksModal } from "@/components/Modals/Works";
-import SkillsModal from "@/components/Modals/Skills";
-import ContactModal from "@/components/Modals/Contact";
+import { SkillsModal } from "@/components/Modals/Skills";
+import { ContactModal } from "@/components/Modals/Contact";
 
 
 export function Modals({ modalVisible, onClose }) {
@@ -15,11 +15,11 @@ export function Modals({ modalVisible, onClose }) {
     <>
       <Overlay isVisible={isAnyModalVisible} onClick={onClose} />
       <div id="modal-container">
-        <HomeModal isVisible={modalVisible.home} />
-        <AboutModal isVisible={modalVisible.about} />
-        <WorksModal isVisible={modalVisible.works} />
-        <SkillsModal isVisible={modalVisible.skills} />
-        <ContactModal isVisible={modalVisible.contact} />
+        <HomeModal isVisible={modalVisible.home} onClose={onClose} />
+        <AboutModal isVisible={modalVisible.about} onClose={onClose} />
+        <WorksModal isVisible={modalVisible.works} onClose={onClose} />
+        <SkillsModal isVisible={modalVisible.skills} onClose={onClose} />
+        <ContactModal isVisible={modalVisible.contact} onClose={onClose} />
       </div>
     </>
   );
