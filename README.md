@@ -1,40 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Portfolio / ポートフォリオ
 
-## Getting Started
+I initially created it using HTML, CSS, and JavaScript, but I am now transitioning to React (Next.js) since I’ve recently started learning it.
 
-First, run the development server:
+現在作成中のポートフォリオです。  
+最初は HTML、CSS、JavaScript で作成していましたが、最近 React（Next.js）を学び始めたため、現在はそちらに移行中です。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Purpose / 目的
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- For my career development  
+- Webエンジニアの仕事を得るため
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Tech Stack / 技術
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- React  
+- Next.js  
+- JavaScript (ES6+)  
+- Node.js (v20, downgraded to avoid compatibility issues with Next.js 15+)  
+- VS Code  
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### Going forward / 今後
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- TailwindCSS  
+- TypeScript  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚠️ エラー発生 / 解決法備忘録
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Node.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **問題・症状**  
+  `npm run dev` 実行時に毎回バグ（エラー）が発生し、ローカルホストが立ち上がらない。
+
+- **原因**  
+  Node.js の最新版（v22以降）は Next.js 15 との互換性に問題がある模様。
+
+- **対応**  
+  最新の LTS バージョンを使用していたが、v20 にダウングレード。  
+  ※ Homebrew 経由でインストールしていると再起動時に最新バージョンに戻ってしまうことがある。  
+  ※ そこで一度アンインストールし、`nvm` 経由で公式コマンドを用いて Node.js v20 をインストールし、デフォルト設定に。  
+
+- **結果**  
+  以降はバグが発生していない。  
+  ※ 完全に正解かは不明だが、現時点で安定している。
+
+---
+
+### Branch
+
+- **問題・症状**  
+  push の度に「ブランチ名 + 2, 3, 4」のような名前のブランチが勝手に作られてしまう。
+
+- **原因（推測）**  
+  VS Code の `git Auto fetch` や `git Auto repository detect` などの設定が影響している可能性。
+
+- **対応**  
+  これらの自動設定をオフにした。  
+  push 時は VS Code の GUI ではなく CLI で、明確にブランチ名を指定して操作している。
+
+---
