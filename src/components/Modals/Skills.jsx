@@ -3,25 +3,23 @@ import styles from "@/components/Modals/Modals.module.css";
 export function SkillsModal({ isVisible, onClose }) {
   return (
     <section
-      id="skills"
-      className={`${styles.modal_section} ${!isVisible ? styles.hidden : ""}`}
-    >
-      <h2>Skills</h2>
-      <div className={styles.skills_grid}>
-        <div className={styles.skills_item}>
+      className={`${styles.modalSection} ${!isVisible ? styles.modalHidden: ""}`}>
+      <h2 className={styles.modalTitle}>Skills</h2>
+      <div className={styles.modalSkillsGrid}>
+        <div className={styles.modalSkillsItem}>
           <p>HTML</p>
         </div>
-        <div className={styles.skills_item}>
+        <div className={styles.modalSkillsItem}>
           <p>CSS</p>
         </div>
-        <div className={styles.skills_item}>
+        <div className={styles.modalSkillsItem}>
           <p>JavaScript</p>
         </div>
-        <div className={styles.skills_item}>
+        <div className={styles.modalSkillsItem}>
           <p>React</p>
         </div>
       </div>
-      <button className={styles.close_btn} onClick={onClose}>閉じる</button>
+      <button className={styles.modalCloseBtn} onClick={onClose}>閉じる</button>
     </section>
   );
 }

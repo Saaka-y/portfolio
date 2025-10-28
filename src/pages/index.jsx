@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Head from "next/head";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Header/Header";
 import { Modals } from "@/components/Modals/Modals";
+import { Intro } from "@/components/Intro/Intro";
 
 
 export default function Home() {
 
   const [modalVisible, setModalVisible] = useState({
-    home: false,
     about: false,
     works: false,
     skills: false,
@@ -17,7 +17,6 @@ export default function Home() {
   // 例: モーダル閉じるときのハンドラー
   const closeAllModals = () => {
     setModalVisible({
-      home: false,
       about: false,
       works: false,
       skills: false,
@@ -39,7 +38,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Saaka's portfolio</title>
       </Head>
-
+      <Intro />
       <Header openModal={openModal} />
       <Modals modalVisible={modalVisible} onClose={closeAllModals} />
     </>

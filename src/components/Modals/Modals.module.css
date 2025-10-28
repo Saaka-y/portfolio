@@ -3,14 +3,20 @@
 /* Modals styles */
 /* ------------------------ */
 
-.hidden {
+.modalHidden {
   display: none;
+}
+
+.modalTitle {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
 /* ------------------------ */
 /* modal overlay */
 /* ------------------------ */
-.modal_overlay {
+.modalOverlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: var(--overlay);
@@ -20,7 +26,7 @@
 /* ------------------------ */
 /* modal section */
 /* ------------------------ */
-.modal_section {
+.modalSection {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -35,7 +41,7 @@
   text-align: center;
 }
 
-.close_btn {
+.modalCloseBtn {
   margin-top: 2rem;
   padding: 0.5rem 1.2rem;
   color: var(--color);
@@ -44,7 +50,8 @@
   cursor: pointer;
 }
 
-.skills_grid {
+
+.modalSkillsGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -52,27 +59,26 @@
   margin-top: 1rem;
 }
 
-.skill_item {
+.modalSkillsItem {
   text-align: center;
 }
 
-.skill_item img {
+.modalSkillsItem img {
   width: 60px;
   height: 60px;
 }
 
-.work_grid {
+
+.modalWorksGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.work_card {
+.modalWorksCard {
   background: #f0f0f0;
   padding: 1rem;
   border-radius: 6px;
 }
-
-
 
