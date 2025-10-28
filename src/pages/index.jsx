@@ -5,6 +5,8 @@ import { Modals } from "@/components/Modals/Modals";
 import { Intro } from "@/components/Intro/Intro";
 
 
+// Intro コンポーネントのアニメーション後の処理
+
 export default function Home() {
 
   const [modalVisible, setModalVisible] = useState({
