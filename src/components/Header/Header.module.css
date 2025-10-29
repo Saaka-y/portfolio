@@ -1,16 +1,13 @@
 .headerBtns {
   display: flex;
   justify-content: center;
-  gap: 1rem; /* ボタン間のスペース */
+  align-items: center;
+  gap: 1rem; 
   padding: 2rem;
-}
-
-@media (min-width: 600px) {
-  
-  .headerBtns {
-    justify-content: flex-end;
-    padding: 2rem 4rem;
-  }
+  position: absolute;
+  top: 50%;           /* 縦中央 */
+  left: 50%;          /* 横中央 */
+  transform: translate(-50%, -50%); /* 中央 */
 }
 
 .headerBtns button {

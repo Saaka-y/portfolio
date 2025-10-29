@@ -5,7 +5,7 @@ import { Modals } from "@/components/Modals/Modals";
 import { Intro } from "@/components/Intro/Intro";
 
 
-// Intro コンポーネントのアニメーション後の処理
+// IntroとHeaderのアニメーションをここでstate管理することに
 
 export default function Home() {
 
@@ -16,7 +16,6 @@ export default function Home() {
     contact: false,
   });
 
-  // 例: モーダル閉じるときのハンドラー
   const closeAllModals = () => {
     setModalVisible({
       about: false,
@@ -33,6 +32,8 @@ export default function Home() {
     }));
   }
 
+  const [showHeader, setShowHeader] = useState(false);
+
   return (
     <>
       <Head>
@@ -40,8 +41,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Saaka's portfolio</title>
       </Head>
-      <Intro />
-      <Header openModal={openModal} />
+      {!showHeader && <Intro onComplete={() => setShowHeader(true)} />}
+      {showHeader && <Header openModal={openModal} />}
       <Modals modalVisible={modalVisible} onClose={closeAllModals} />
     </>
   );
