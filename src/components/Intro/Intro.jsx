@@ -16,9 +16,9 @@ export function Intro({ onComplete }) {
       transition={{ delay: 5, duration: 1 }}
       onAnimationComplete={onComplete} // フェードアウト完了で Header 表示
     >
-      <h1 className={styles.introTitle}> // ①タイトル表示
+      <h1 className={styles.introTitle}> 
         {title.split("").map((char, index) => (
-          <motion.span 
+          <motion.span // ①タイトル表示
             key={index}
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

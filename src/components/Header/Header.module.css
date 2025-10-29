@@ -5,13 +5,17 @@
   gap: 1rem; 
   padding: 2rem;
   position: absolute;
-  top: 50%;           /* 縦中央 */
+  top: 40%;           /* 縦中央 */
   left: 50%;          /* 横中央 */
   transform: translate(-50%, -50%); /* 中央 */
 }
 
 .headerBtns button {
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  font-style: normal;
   background: transparent;
+  font-size: 1rem;
   color: var(--color);
   border: none;
   padding: 0.5rem 1rem;

@@ -8,9 +8,15 @@
 }
 
 .modalTitle {
-  font-size: 1rem;
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #e0e0e0;
 }
 
 /* ------------------------ */
@@ -34,7 +40,8 @@
   background: var(--bg);
   padding: 2rem;
   border-radius: 10px;
-  width: 90%;
+  width: 80%;
+  height: 90%;
   max-width: 600px;
   z-index: 20;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -52,20 +59,26 @@
 
 
 .modalSkillsGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-items: center; /* アイコン＋文字を中央揃え */
 }
 
 .modalSkillsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   text-align: center;
+  font-size: 1rem;
 }
 
-.modalSkillsItem img {
-  width: 60px;
-  height: 60px;
+.modalSkillsItem svg {
+  width: 40px;
+  height: 40px;
+  color: #2e2e2b;
 }
 
 
