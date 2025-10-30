@@ -1,22 +1,20 @@
-
 /* ------------------------ */
 /* Modals styles */
 /* ------------------------ */
 
-.modalHidden {
-  display: none;
-}
 
 .modalTitle {
-  font-family: "Patrick Hand SC", cursive;
+  /* font-family: "Patrick Hand SC", cursive; */
   font-weight: 400;
-  font-style: normal;
   font-size: 1.5rem;
   letter-spacing: 1px;
   display: block;
-  width: 50%;
-  margin: 0 auto;
-  background-color: #e0e0e0;
+  width: 200px;
+  margin: 0 auto 1rem;
+  padding: 0.7rem;
+  border-radius: 24px 24px 24px 8px;
+  background-color: var(--wordBg);
+  letter-spacing: 3px;
 }
 
 /* ------------------------ */
@@ -24,7 +22,10 @@
 /* ------------------------ */
 .modalOverlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--overlay);
   z-index: 10;
 }
@@ -39,31 +40,39 @@
   transform: translate(-50%, -50%);
   background: var(--bg);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 10% 10%  10%  10%;
   width: 80%;
-  height: 90%;
+  height: 80%;
   max-width: 600px;
   z-index: 20;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-family: "Patrick Hand SC", cursive;
   text-align: center;
 }
 
 .modalCloseBtn {
-  margin-top: 2rem;
-  padding: 0.5rem 1.2rem;
+  position: absolute;
+  bottom: 1.6rem; 
+  left: 50%;  
+  transform: translateX(-50%); /* 完全に中央に */
   color: var(--color);
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
+/* ------------------------ */
+/* skills */
+/* ------------------------ */
 .modalSkillsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-  justify-items: center; /* アイコン＋文字を中央揃え */
+  gap: 2rem 1rem;
+  margin-top: 3rem;
+  justify-items: center;
 }
 
 .modalSkillsItem {
@@ -79,19 +88,28 @@
   width: 40px;
   height: 40px;
   color: #2e2e2b;
+  transition: transform 0.3s;
+}
+
+.modalSkillsItem:hover svg {
+  transform: scale(1.2);
 }
 
 
-.modalWorksGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+/* ------------------------ */
+/* works */
+/* ------------------------ */
+.modalWorksList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .modalWorksCard {
   background: #f0f0f0;
   padding: 1rem;
-  border-radius: 6px;
+  border-radius: 24px 24px 24px 8px;
+  font-size: 1.5rem;
 }
-

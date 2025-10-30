@@ -9,6 +9,7 @@
   --color: #2e2e2b;
   --white: #fdfdfd;
   --overlay: rgba(0, 0, 0, 0.5);
+  --wordBg: #e0e0e0;
 }
 
 body {

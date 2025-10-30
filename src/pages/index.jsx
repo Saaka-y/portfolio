@@ -5,6 +5,7 @@ import { Modals } from "@/components/Modals/Modals";
 import { Intro } from "@/components/Intro/Intro";
 
 
+
 // IntroとHeaderのアニメーションをここでstate管理することに
 
 export default function Home() {
@@ -16,6 +17,13 @@ export default function Home() {
     contact: false,
   });
 
+    const openModal = (name) => {
+    setModalVisible((prev) => ({
+      ...prev, 
+      [name]: true,
+    }));
+  }
+
   const closeAllModals = () => {
     setModalVisible({
       about: false,
@@ -24,13 +32,6 @@ export default function Home() {
       contact: false,
     });
   };
-
-  const openModal = (name) => {
-    setModalVisible((prev) => ({
-      ...prev, // keep previous states
-      [name]: true, // change only the state of the specified modal to true
-    }));
-  }
 
   const [showHeader, setShowHeader] = useState(false);
 

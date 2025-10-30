@@ -1,13 +1,22 @@
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面全体に中央揃え */
+  width: 100%;
+}
+
 .headerBtns {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem; 
   padding: 2rem;
-  position: absolute;
-  top: 40%;           /* 縦中央 */
-  left: 50%;          /* 横中央 */
-  transform: translate(-50%, -50%); /* 中央 */
+  /* position: absolute;
+  top: 40%;    
+  left: 50%;   
+  transform: translate(-50%, -50%);  */
 }
 
 .headerBtns button {
@@ -25,5 +34,5 @@
 }
 
 .headerBtns button:hover {
-  background: #e0e0e0;
+  background: var(--wordBg);
 }

@@ -1,12 +1,11 @@
 import styles from "@/components/Modals/Modals.module.css";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGit, FaGithub } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiResponsive } from "react-icons/si";
-
+import { ModalAnimation } from "@/components/Modals/ModalAnimation";
 
 export function SkillsModal({ isVisible, onClose }) {
   return (
-    <section
-      className={`${styles.modalSection} ${!isVisible ? styles.modalHidden : ""}`}>
+    <ModalAnimation isVisible={isVisible} onClose={onClose}>
       <h2 className={styles.modalTitle}>Skills</h2>
       <div className={styles.modalSkillsGrid}>
         <div className={styles.modalSkillsItem}>
@@ -46,7 +45,6 @@ export function SkillsModal({ isVisible, onClose }) {
           <p>Node.js</p>
         </div>
       </div>
-      <button className={styles.modalCloseBtn} onClick={onClose}>閉じる</button>
-    </section>
+    </ModalAnimation>
   );
 }
