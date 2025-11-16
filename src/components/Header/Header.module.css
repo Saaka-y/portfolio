@@ -20,9 +20,6 @@
 }
 
 .headerBtns button {
-  font-family: "Patrick Hand SC", cursive;
-  font-weight: 400;
-  font-style: normal;
   background: transparent;
   font-size: 1rem;
   color: var(--color);
